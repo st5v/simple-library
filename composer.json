@@ -1,0 +1,28 @@
+{
+    "autoload": {
+        "psr-4": {
+            "SimpleLibrary\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "nesbot/carbon": "^3.8"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^1.12",
+        "phpmd/phpmd": "^2.15",
+        "squizlabs/php_codesniffer": "^3.10"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "pest": "pest",
+        "phpstan": "phpstan analyse -l 9 src tests",
+        "phpmd": "phpmd src text phpmd-ruleset.xml",
+        "phpcs": "phpcs --standard=psr12 src"
+    }
+}
